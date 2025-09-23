@@ -1,4 +1,6 @@
 <!-- Write code below 💖 -->
+
+<!--Chapter 1 on Codedex-->
 <h2>23/09/2025</h2>
 <p>Hello World! </p> 
 <body>
@@ -59,3 +61,109 @@ It will be held on <u>Monday, October 14th</u> at <s>7PM</s> 8PM EST.</p>
 src attribute, which stands for “source”, specifies the file path of the image.-->
 <p>Here's a cute pic:</p>
 <img src="https://i.redd.it/5unn16axx1v81.jpg">
+
+
+<!--Chapter 2 on Codedex-->
+<!--Main Structure -->
+<!DOCTYPE html>
+<html>
+  <head> <!--Contains all the info for your browser that's not visible on the page.-->
+    <title>Web Titile | Start your coding adventure ⋆˙⟡</title> <!--The <title> element goes in the <head> and assigns text to the browser tab.-->
+  </head>
+  <body> <!--Contains all of the content that you will end up seeing on the page.-->
+    <!--all the "main" code goes in the <body> element.-->
+  </body>
+</html>
+
+<!--Attributes: Additional settings that we can use to customize an element.-->
+<element name="value">Content</element>
+<!--By default, the <ol> ordered list element uses numbers to label its <li> list item elements. -->
+<ol>
+  <li>Power ⚡</li>
+  <li>Courage 🔥</li>
+  <li>Wisdom 🦉</li>
+</ol>
+<!--If we want to use lowercase letters instead:-->
+<ol type="a">
+  <li>Power ⚡</li>
+  <li>Courage 🔥</li>
+  <li>Wisdom 🦉</li>
+</ol>
+<!--Or, if want to use Roman numerals:-->
+<ol type="i">
+  <li>Power ⚡</li>
+  <li>Courage 🔥</li>
+  <li>Wisdom 🦉</li>
+</ol>
+<!--In addition to src, we can also use the alt attribute to make our images more accessible.-->
+<img src="https://www.codedex.io/images/tier1.png">
+<img alt="pixel girl using a laptop" src="https://www.codedex.io/images/tier1.png">
+<!--We can also use the target attribute and set it to "_blank" to make the link open in a new browser tab:-->
+<a href="https://www.codedex.io/">Codédex</a>
+<a href="https://www.codedex.io/" target="_blank">Codédex</a>
+
+<!--Classes:An element can be assigned multiple class values in the form of a space-separated list-->
+<p class="first-value second-value third-value">Hello, World</p>
+<!--IDs: Each element can only have one id value with no spaces. Every id value should be unique in the entire page:-->
+<p id="value">Hello, World</p>
+<!--The <div> element is used to group content and be labeled by the class and id attributes.-->
+<div class="page-section" id="about-me">
+  <h2>About Me</h2>
+  <p>Ness is an aspiring web developer!</p>
+</div>
+
+<div class="page-section" id="social-media">
+  <h2>Social:</h2>
+  <ul>
+    <li>GitHub</li>
+    <li>Twitter</li>
+    <li>LinkedIn</li>
+  </ul>
+</div>
+
+<!--The style Attribute: First, we can apply a style attribute to any HTML element to stylize certain aspects of that element, such as what color the text should be: -->
+<p>
+  Roses are <span style="color:red;">red</span>.<br />
+  Violets are <span style="color:blue;">blue</span>.
+</p>
+<p>
+  Roses are <span style="color:red; text-decoration:underline;">red</span>.<br />
+  Violets are <span style="color:blue; text-decoration:underline;">blue</span>.
+</p>
+<!--The <style> element can be used in the <head> to style our elements in the <body>.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      ... Styles for elements go here
+    </style>
+  </head>
+  <body>
+    ... Elements go here
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      span {
+        text-decoration: underline;
+      }
+
+      #red-word {
+        color: red;
+      }
+
+      #blue-word {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Roses are <span id="red-word">red</span>.<br />
+      Violets are <span id="blue-word">blue</span>.<br />
+    </p>
+  </body>
+</html>

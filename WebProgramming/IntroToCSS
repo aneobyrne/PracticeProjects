@@ -1,0 +1,188 @@
+/*Every rule begins with a selector, followed by curly brackets { }.
+Inside, declarations are made of property:value pairs separated by a colon. Each line ends with a ; semicolon */
+
+/*Selectors are used to determine which HTML element(s) get styled.*/
+div { /*Selector*/
+  /* Styles go here. */
+}
+/*following example selects elements with a class of "class-name" or an id of "id-name":*/
+.class-name { /*Selecting by class is done with a .*/
+  /* Styles go here. */
+}
+#id-name { /*Selecting by id is done with a # hashtag*/
+  /* Styles go here. */
+}
+/*Rather than selecting every element with a matching class or id, the example above selects only div elements that either have a class of "class-name" or an id of "id-name".*/
+div.class-name {
+  /* Styles go here. */
+}
+div#id-name {
+  /* Styles go here. */
+}
+
+/*We can group our styles together so we aren't repeating ourselves:*/
+ul, ol {
+  border: 1px solid;
+  width: 50px;
+}
+/*We can also get more specific by using the > symbol to select child elements, such as only <li> elements under unordered lists:*/
+ul > li {
+  border: 1px solid;
+  width: 50px;
+}
+/*EXAMPLE*/
+ul, ol { /*both the ul and ol list elements*/
+  border: 1px solid;
+  width: 200px;
+}
+ul { /*the ul unordered list*/
+  background-color: lightgreen;
+}
+ol { /*ol ordered list*/
+  background-color: skyblue;
+  color: white;
+}
+ul > li { /*Use the > selector and style the li list item inside the ul unordered list*/
+  text-decoration: underline wavy 3px brown;
+}
+ol > li { /*Use the > selector and style the li list item inside the ol ordered list*/
+  text-decoration: underline dotted 3px indigo;
+}
+
+/*MORE EXAMPLE*/
+body {
+  background: linear-gradient(skyblue, green) no-repeat;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+main, header, footer {
+  width: 70%;
+  margin: auto;
+}
+
+header, footer{
+  text-align: center;
+}
+
+header > img {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+#night-2 {
+  text-align: right;
+}
+
+/*CSS Colors*/
+/*common ways to assign colors in CSS is by naming them with English words:*/
+p {
+  color: red; /*Browsers usually support 140 colors names as listed in this page: https://www.w3schools.com/cssref/css_colors.php*/
+}
+/*RGB, perhaps the most popular one, represents the intensity of the red-ness, green-ness, and blue-ness of the color(s) that we assign to a given element.*/
+color: rgb(255, 0, 0);     /* Red */
+color: rgb(0, 255, 0);     /* Green */
+color: rgb(0, 0, 255);     /* Blue */
+/*This can alternatively be expressed with hexadecimals*/
+color: #ff0000;    /* Red */
+color: #008000;    /* Green */
+color: #0000ff;    /* Blue */
+
+/*Sizing in CSS*/
+/*Size can be changed in CSS by selecting the image and setting our own width and height properties:*/
+img {
+ width: 250px;
+ height: 400px;
+}
+/*The kinds of measurements we can give to an element's properties can be split into two groups: absolute units and relative units.*/
+element {
+  width: 10px; /*Pixels (px) are the most commonly used ones. Other options include points (pt) and centimeters (cm)*/
+  height: 10px;
+}
+/*They are often expressed as percentages*/
+element {
+  width: 50%;
+}
+/*em and rem: frequently-used relative units*/
+
+/*CSS Fonts: https://www.w3schools.com/css/css_font.asp*/
+/*To assign these families with CSS, we use the font-family property*/
+p {
+  font-family: Arial, sans-serif;
+}
+/*The font-size property sets how big the text of a given element should be on the page. It can either be done with absolute units (px, pt, etc.) or relative units (percentages, em, rem, etc.)*/
+/* With Absolute Units */
+p {
+  font-size: 12px;
+}
+/* With Relative Units */
+p {
+  font-size: 12em;
+}
+/*We can also use the font-weight property to set the default "thickness" of a given element's text:This property uses either keyword values (e.g., lighter and bolder), or numeric values (e.g., 100 and 800)*/
+*/- Anything less than 400 makes the font thinner or lighter.
+  - The 400-700 range is considered "normal" for most fonts.
+  - Anything above 700 usually makes the font bolder.*/
+
+/*Alignment*/
+/*In CSS, we can horizontally align our text the same way with the text-align property!
+Three common ways to align text are: to the left (this is the default), in the center, or to the right:*/
+#left-align {
+ text-align: left;
+}
+#center-align {
+ text-align: center;
+}
+#right-align {
+ text-align: right;
+}
+
+/*Decoration*/
+p {
+  text-decoration: underline ... ... ...;
+}
+
+/*BG Color*/
+/* With named colors */
+div {
+ background-color: red;
+}
+/* With rgb() function */
+div {
+ background-color: rgb(0, 0, 255);
+}
+/* With hexadecimals */
+div {
+ background-color: #ffff00;
+}
+
+/*BG Image*/
+div {
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/10/19/13/city-skyline-2626619_960_720.jpg');
+}
+
+/*BG Size*/
+background-size: contain; /*This property will scale the image down to fit inside its container. With contain, the image will not be cropped; the cover value will crop the image.*/
+background-repeat: no-repeat; /*Background images may repeat if the container is larger than the image. To prevent this*/
+
+/*Shorthand Properties*/
+/*The border property, for example, is actually a shorthand for three additional properties: width, style, and color!*/
+span {
+  border-width: 3px;
+  border-style: dashed;
+  border-color: #ff0000;
+}
+span {
+  border: 3px dashed #ff0000;
+}
+span {
+  font-family: Georgia, serif;
+  font-weight: 800;
+  font-size: 12px;
+}
+span {
+  font: 800 12px Georgia, serif;
+}

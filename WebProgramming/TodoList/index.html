@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- Info not shown on screen -->
+    <meta charset="UTF-8"> <!-- Emoji Handler -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapts page to device screen -->
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css"> <!-- Load css file -->
+</head>
+<body> <!-- What you'll see on the web screen -->
+    <div class="container">
+        <h1>Manage Your Tasks!</h1>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="What do you need to get done?">
+            <button onclick="addTask()">Add Task!</button>
+        </div>
+        <ul id="taskList"></ul> <!-- Unordered list where tasks will be added dynamically -->
+    </div>
+    <script src="script.js"></script> <!-- Load js file -->
+</body>
+</html>

@@ -1,6 +1,6 @@
 function addTask() {
-    const taskInput = document.getElementById('taskInput');
-    const taskText = taskInput.value.trim();
+    const taskInput = document.getElementById('taskInput'); //task written by user
+    const taskText = taskInput.value.trim(); //gets what the user typed and removes spaces at the start/end
 
     if (taskText === '') {
         alert('No task has been entered!');
@@ -10,15 +10,15 @@ function addTask() {
     const taskList = document.getElementById('taskList');
     const listItem = document.createElement('li');
 
-    // Task text span
+    // Task text span (holds the text that the user wrote)
     const taskSpan = document.createElement('span');
     taskSpan.textContent = taskText;
 
     // Complete button
     const completeButton = document.createElement('button');
-    completeButton.innerHTML = '✔'; // Green checkmark icon
+    completeButton.innerHTML = '✔'; //Shows checkmark icon
     completeButton.onclick = () => {
-        taskSpan.classList.toggle('completed');
+        taskSpan.classList.toggle('completed'); //when clicked, it toggles the CSS class completed
     };
 
     // Remove button

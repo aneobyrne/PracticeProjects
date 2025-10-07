@@ -1,0 +1,93 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers h1 and container horizontally */
+}
+
+h1 {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 1500;
+    color: black;
+    text-align: center;
+    /*text-decoration: underline;*/
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(254, 255, 240);
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+.container p {
+  margin-bottom: 20px; /* space above the input */
+  font-weight: 550;
+}
+
+#startNumber {
+    width: 60%;                 /* full width of the container */
+    padding: 10px 10px;          /* inner spacing */
+    font-size: 16px;             /* readable font size */
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid #cccccc;      /* subtle border */
+    border-radius: 10px;         /* rounded corners */
+    outline: none;               /* remove blue outline on focus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;         /* space below the input */
+    box-sizing: border-box;      /* makes width consistent */
+}
+
+#startNumber:focus {             
+  border-color: #eae35e;       
+  box-shadow: 0 0 6px rgba(164, 164, 164, 0.3);
+}
+
+#startBtn {
+  width: 35%;                 
+  padding: 10px 10px;
+  font-size: 13px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: rgb(82, 82, 82);
+  background-color: #c9c9c999;   
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#startBtn:hover {              /* Hover effect */
+  background-color: #eae35e;   
+  transform: scale(1.03);      /* subtle “pop” on hover */
+}
+
+#startBtn:active {             /* When button is clicked */
+  transform: scale(0.98);
+}
+
+#output {
+    font-size: 18px;               /* slightly larger text */
+    text-align: center;            /* center the countdown numbers or text */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #333;
+}

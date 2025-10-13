@@ -95,22 +95,33 @@
       </div>
     </div>
 
-    <div id="outfitGameContainer"> <!-- Interactive What to wear Game for users! -->
-    <h3>What Could You Wear Today?</h3>
-      <div class="outfit-game">
-        <div class="buttons-container">
-                <button class="outfit-btn" data-points="5" data-item="scarf">🧣</button>
-                <button class="outfit-btn" data-points="10" data-item="jacket">🧥</button>
-                <button class="outfit-btn" data-points="8" data-item="jumper">🧶</button>
-                <button class="outfit-btn" data-points="4" data-item="shirt">👕</button>
-                <button class="outfit-btn" data-points="8" data-item="longPants">👖</button>
-                <button class="outfit-btn" data-points="4" data-item="shortPants">🩳</button>
-                <button class="outfit-btn" data-points="5" data-item="shoes">👟</button>
-                <button class="outfit-btn" data-points="8" data-item="boots">🥾</button>
-        </div>
-        <div class="output-container">
-            <p id="outfitInstruction"> • Let's see if your outfit is temperature approved!</p>
-            <p id="outfitAdvice"></p>
+    <div id="outfitGameContainer" class ="game-section"> <!-- Interactive What to wear Game for users! -->
+      <div id="gameIntro" class="game-intro">
+        <h2>What's appropriate to wear today?</h2>
+        <p>Plan your outfit and see if it's appropriate for the weather ahead.</p>
+        <button id="startGameBtn">Press to Try</button>
+      </div>
+      <div id="gameContent" class="game-content">
+        <h3>What Could You Wear Today?</h3>
+        <div class="outfit-game">
+          <div class="buttons-container"> <!-- REMINDER: Draw Pixel Icons! -->
+                <button class="outfit-btn" data-item="scarf">🧣</button>
+                <button class="outfit-btn" data-item="jacket">🧥</button>
+                <button class="outfit-btn" data-item="jumper">🧶</button>
+                <button class="outfit-btn" data-item="shirt">👕</button>
+                <button class="outfit-btn" data-item="longPants">👖</button>
+                <button class="outfit-btn" data-item="shortPants">🩳</button>
+                <button class="outfit-btn" data-item="shoes">👟</button>
+                <button class="outfit-btn"data-item="boots">🥾</button>
+          </div>
+          <div class="output-container">
+                <p id="outfitCity"><strons>City:</strons> -- </p>
+                <hr>
+                <p id="outfitDayTemp"><strong>Day:</strong> -- | <strong>Temp:</strong> --°C</p>
+                <hr>
+                <p id="outfitInstruction"> • Let's see if your outfit is temperature approved!</p>
+                <p id="outfitAdvice"></p>
+          </div>
         </div>
       </div>
     </div>

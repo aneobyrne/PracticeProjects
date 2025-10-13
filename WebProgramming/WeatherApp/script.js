@@ -3,7 +3,7 @@ let forecastDataGlobal = []; //Empty Array to store future data
 //WEATHER INFO
 async function getWeather() {
     const city = document.getElementById('city').value; //Input City Name
-    const apiKey = 'e71d91357891aa32f75d92c0038ca182'; //OpenWEatherMap API key (for data authorization)
+    const apiKey = 'PUTYOURKEYHERE'; //OpenWEatherMap API key (for data authorization)
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; //current weather
     const forecastWeatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`; //future weather
 
@@ -124,7 +124,7 @@ function addRowToTable(data) {
 
 //POLLUTION INFO
 async function getPollution(lat, lon) {
-    const apiKey = 'e71d91357891aa32f75d92c0038ca182';
+    const apiKey = 'PUTYOURKEYHERE';
     const url = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
     
     try {
@@ -328,3 +328,4 @@ document.getElementById('city').addEventListener('keypress', function (event) {
         getWeather();
     }
 });
+

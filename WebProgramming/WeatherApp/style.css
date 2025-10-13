@@ -280,7 +280,6 @@ body { /*All elements in display*/
 #pollutionWarning {
     margin-top: 10px;
     color: rgb(30, 30, 30);
-    font-weight: bold;
 }
 
 /*INTERACTIVE GAME*/
@@ -292,6 +291,50 @@ body { /*All elements in display*/
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     width: 100%;
 }
+/*1.Default display*/
+.game-section {
+  margin-top: 20px;
+  text-align: center;
+}
+/*1.1 Heading*/
+.game-intro h2 {
+  color: #4402ae;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.game-intro p {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1em;
+  margin-bottom: 30px;
+}
+.game-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.game-content.show {
+  display: block;
+  opacity: 1;
+}
+/*1.2 Button*/
+#startGameBtn {
+  /*Button style*/
+  background-color: #55a7fa;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  /*Content: */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+#startGameBtn:hover {
+  background-color: #264b6f;
+}
+/*2.Hidden Game*/
 #outfitGameContainer h3{
     margin-bottom: 20px;
     border-bottom: 2px solid #000000;
@@ -301,53 +344,65 @@ body { /*All elements in display*/
     gap: 20px;
     align-items: flex-start;
 }
+/*2.1 Game Buttons and their positioning: */
 .buttons-container {
     display: grid;
-    grid-template-columns: repeat(5, 70px); /* 5 columns*/
-    grid-template-rows: repeat(4, 60px);   /* 4 rows*/
-    gap: 15px;
+    grid-template-columns: repeat(9, 35px); /*9 columns*/
+    grid-template-rows: repeat(4, 60px);   /*4 rows*/
+    gap: 10px;
     justify-content: center;
+    position: relative;
 }
 .outfit-btn[data-item="scarf"] {
-    grid-column: 3 / 4; 
-    grid-row: 1 / 2; 
+    background-color: #ffffff;
+    grid-column: 4/6; 
+    grid-row: 1; 
 }
 .outfit-btn[data-item="jacket"] {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    background-color: #ffffff;
+    grid-column: 2/4;
+    grid-row: 2;
 }
 .outfit-btn[data-item="jumper"] {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
+    background-color: #ffffff;
+    grid-column: 4/6;
+    grid-row: 2;
 }
 .outfit-btn[data-item="shirt"] {
-    grid-column: 5 / 6;
-    grid-row: 2 / 3;
+    background-color: #ffffff;
+    grid-column: 6/8;
+    grid-row: 2;
 }
 .outfit-btn[data-item="longPants"] {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    background-color: #ffffff;
+    grid-column: 5/7;
+    grid-row: 3;
 }
 .outfit-btn[data-item="shortPants"] {
-    grid-column: 4 / 5;
-    grid-row: 3 / 4;
+    background-color: #ffffff;
+    grid-column: 3/5;
+    grid-row: 3;
 }
 .outfit-btn[data-item="shoes"] {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
+    background-color: #ffffff;
+    grid-column: 3/5;
+    grid-row: 4;
 }
 .outfit-btn[data-item="boots"] {
-    grid-column: 4 / 5;
-    grid-row: 4 / 5;
+    background-color: #ffffff;
+    grid-column: 5/7;
+    grid-row: 4;
 }
 .outfit-btn {
-    font-size: 1.2rem;
-    padding: 15px;
+    /*Button style*/
     border-radius: 12px;
     border: 2px solid #4402ae;
     background-color: #eaf0ff;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    /*Content*/
+    font-size: 1.2rem;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -363,16 +418,50 @@ body { /*All elements in display*/
     color: white;
     transform: scale(1.05);
 }
+/*2.2 Result right container*/
 .output-container {
+    /*Container style*/
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    border: 2px solid #4402ae;
+    border-radius: 12px;
+    width: 250px;
+    min-height: 220px;
+    margin-left: -50px;
+    /*Content*/
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px 20px;
 }
-
-#outfitInstruction{
-    margin-top: 10px;
-    margin-bottom: 20px;
+.output-container p {
+  margin: 5px 0;
+  color: #222;
+}
+#outfitCity,
+#outfitDayTemp {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4402ae;
+}
+#outfitInstruction {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #000;
+}
+#outfitAdvice {
+  margin-top: 15px;
+  font-style: italic;
+  color: #333;
+}
+.output-container hr {
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-color: #4402ae;
+  margin: 8px 0;
 }
 
 /*Smaller screens adapt*/
